@@ -2,9 +2,19 @@
 /* style.css */
 
 html { scroll-behavior: smooth; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0e11; color: #e0e6ed; margin: 0; display: flex; flex-direction: column; align-items: center; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0e11; color: #e0e6ed; margin: 0; display: flex; flex-direction: column; align-items: center; position: relative; }
 
-.main-section { display: flex; justify-content: center; align-items: center; min-height: 100vh; text-align: center; padding: 2rem; width: 100%; max-width: 800px; box-sizing: border-box; }
+#particle_canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: block;
+}
+
+.main-section { display: flex; justify-content: center; align-items: center; min-height: 100vh; text-align: center; padding: 2rem; width: 100%; max-width: 800px; box-sizing: border-box; position: relative; z-index: 1; }
 .container { width: 100%; }
 
 /* VANESSA AVATAR START */
@@ -35,6 +45,8 @@ p { font-size: 1.2rem; line-height: 1.8; color: #94a3b8; }
     box-sizing: border-box; 
     text-align: center;
     transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .content-section:hover {
