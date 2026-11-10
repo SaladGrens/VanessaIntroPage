@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* style.css */
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0e11; color: #e0e6ed; margin: 0; display: flex; flex-direction: column; align-items: center; }
+
+.main-section { display: flex; justify-content: center; align-items: center; min-height: 100vh; text-align: center; padding: 2rem; width: 100%; max-width: 800px; box-sizing: border-box; }
+.container { width: 100%; }
+
+/* VANESSA AVATAR START */
+.avatar-container { position: relative; width: 250px; height: 250px; margin: 0 auto 2rem; }
+.avatar-frame { width: 100%; height: 100%; border-radius: 50%; border: 3px solid #00e676; box-shadow: 0 0 20px rgba(0, 230, 118, 0.3); display: flex; justify-content: center; align-items: center; background: #15191e; overflow: hidden; }
+.avatar-frame img { width: 100%; height: 100%; object-fit: cover; }
+/* VANESSA AVATAR END */
+
+h1 { font-size: 3.5rem; font-weight: bold; margin: 0; color: white; }
+.subtitle { font-size: 1.8rem; font-weight: normal; margin-bottom: 2rem; background: linear-gradient(135deg, #00e676, #00bfa5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+.subtitle::before { content: '<'; -webkit-text-fill-color: #00e676; }
+.subtitle::after { content: '>'; -webkit-text-fill-color: #00bfa5; }
+
+p { font-size: 1.2rem; line-height: 1.8; color: #94a3b8; }
+.details { margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.btn { padding: 0.75rem 1.5rem; border: 1px solid #334155; border-radius: 30px; color: #94a3b8; text-decoration: none; font-size: 1rem; transition: all 0.3s ease; background: transparent; cursor: pointer; display: inline-block; position: relative; }
+/* Only border changes color on hover */
+.btn:hover { border-color: #00e676; color: white; transform: scale(1.05); }
+
+/* CONTENT SECTION HOVER ANIMATION */
+.content-section { 
+    padding: 4rem 2rem; 
+    border-top: 1px solid #1e293b; 
+    background-color: transparent; 
+    width: 100%; 
+    max-width: 800px; 
+    box-sizing: border-box; 
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.content-section:hover {
+    transform: scale(1.02);
+}
+
+.content-section h2 { font-size: 2.5rem; background: linear-gradient(135deg, #00e676, #00bfa5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; padding-bottom: 0.5rem; margin-top: 0; }
+.content-section p { margin: 1.5rem auto 1.5rem; max-width: 800px; }
+
+.capability-list { list-style: none; padding: 0; max-width: 600px; margin: 0 auto; text-align: left; }
+.capability-list li { padding: 0.5rem 0; color: #94a3b8; }
+.capability-list li::before { content: '✓ '; color: #00e676; margin-right: 0.5rem; }
